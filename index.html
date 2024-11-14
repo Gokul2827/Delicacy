@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
 <body>
     <header>
@@ -15,16 +14,22 @@
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="#home" class="home-active">Home</a></li>
-           <li><a href="#categories">Categories</a></li>
+           <li><a href="#Categories">Categories</a></li>
            <li><a href="#products">Products</a></li>
            <li><a href="#about">About</a></li>
            <li><a href="#customers">Customers</a></li>
         </ul>
-        <div class="profile">
+        <div class="profile" onclick="profileReval()" id="profile">
             <img src="img/0V5A5299.jpg">
             <span>Gokulakrishnan</span>
-            <i class='bx bx-caret-down' ></i>
+            <i class='bx bx-caret-down'></i>
         </div>
+        <div id="profscroll" >
+          <p>Profile ></p>
+          <p>settings ></p>
+          <p onclick="logoutpge()">Logout ></p>  
+        </div>
+
     </header>
     <!--Home-->
     <section class="home swiper" id="home">
@@ -34,7 +39,7 @@
                 <div class="home-text">
                     <span>we are delicacy</span>
                     <h1>choose delicacy<br>the best healthy<br>chicken salad</h1>
-                    <a href="#" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
+                    <a href="#products" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
                 </div>
                 <img src="img/pic 1.jpg" alt="">
               </div>
@@ -43,7 +48,7 @@
                 <div class="home-text">
                     <span>we are delicacy</span>
                     <h1>choose delicacy<br>the best healthy<br>chicken salad</h1>
-                    <a href="#" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
+                    <a href="#products" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
                 </div>
                 <img src="img/pic 2.jpg" alt="">
               </div>
@@ -52,13 +57,13 @@
                 <div class="home-text">
                     <span>we are delicacy</span>
                     <h1>choose delicacy<br>the best healthy<br>chicken salad</h1>
-                    <a href="#" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
+                    <a href="#products" class="btn">shop now<i class='bx bx-right-arrow-alt' ></i></a>
                 </div>
                 <img src="img/pic 3.jpg" alt="">
               </div>
             </div>
             <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> 
+            <div class="swiper-button-prev"></div>  
     </section>
     <!--categories-->
     <section class="Categories" id="Categories">
@@ -108,89 +113,23 @@
     <section class="products" id="products">
       <div class="heading">
         <h1>Our Popular<br><span>Products</h1>
-        <a href="#" class="btn">Shop Now<i class='bx bx-right-arrow-alt' ></i></a>
+      <a href=""  id="openshopping" class="btn">Cart<i class='bx bx-right-arrow-alt' ></i></a>
+      <div class="card">
+        
+        <h1>cart</h1><div class="overflow">
+        
+       <ul class="listcard"></ul>
+
       </div>
-      <div class="products-container">
-        <!--box1-->
-        <div class="box">
-            <img src="img/Food Plate - 640x468.png">
-            <span>fresh items'</span>
-            <h2>farm fresh organic<br>fruits 250g</h2>
-            <h3 class="price">$7.99<span>/kg</span></h3>
-            <i class='bx bx-cart'></i>
-            <i class='bx bx-heart' ></i>
-            <span class="discount">-25%</span>
+        <div class="checkout">
+          <div >Total  ₹  <span class="total" style="color: white;"> 0 </span> </div>
+          <div class="closeshopping">close</div>
         </div>
-        <!--box2-->
-        <div class="box">
-          <img src="img/Food Plate - 640x468.png">
-          <span>fresh items'</span>
-          <h2>farm fresh organic<br>fruits 250g</h2>
-          <h3 class="price">$7.99<span>/kg</span></h3>
-          <i class='bx bx-cart'></i>
-          <i class='bx bx-heart' ></i>
-          <span class="discount">-25%</span>
+
       </div>
-      <!--box3-->
-      <div class="box">
-        <img src="img/Food Plate - 640x468.png">
-        <span>fresh items'</span>
-        <h2>farm fresh organic<br>fruits 250g</h2>
-        <h3 class="price">$7.99<span>/kg</span></h3>
-        <i class='bx bx-cart'></i>
-        <i class='bx bx-heart' ></i>
-        <span class="discount">-25%</span>
-    </div>
-    <!--box4-->
-    <div class="box">
-      <img src="img/Food Plate - 640x468.png">
-      <span>fresh items'</span>
-      <h2>farm fresh organic<br>fruits 250g</h2>
-      <h3 class="price">$7.99<span>/kg</span></h3>
-      <i class='bx bx-cart'></i>
-      <i class='bx bx-heart' ></i>
-      <span class="discount">-25%</span>
-  </div>
-  <!--box5-->
-  <div class="box">
-    <img src="img/Food Plate - 640x468.png">
-    <span>fresh items'</span>
-    <h2>farm fresh organic<br>fruits 250g</h2>
-    <h3 class="price">$7.99<span>/kg</span></h3>
-    <i class='bx bx-cart'></i>
-    <i class='bx bx-heart' ></i>
-    <span class="discount">-25%</span>
-</div>
-    <!--box6-->
-    <div class="box">
-      <img src="img/Food Plate - 640x468.png">
-      <span>fresh items'</span>
-      <h2>farm fresh organic<br>fruits 250g</h2>
-      <h3 class="price">$7.99<span>/kg</span></h3>
-      <i class='bx bx-cart'></i>
-      <i class='bx bx-heart' ></i>
-      <span class="discount">-25%</span>
-  </div>
-  <!--box7-->
-  <div class="box">
-    <img src="img/Food Plate - 640x468.png">
-    <span>fresh items'</span>
-    <h2>farm fresh organic<br>fruits 250g</h2>
-    <h3 class="price">$7.99<span>/kg</span></h3>
-    <i class='bx bx-cart'></i>
-    <i class='bx bx-heart' ></i>
-    <span class="discount">-25%</span>
-</div>
-<!--box8-->
-<div class="box">
-  <img src="img/Food Plate - 640x468.png">
-  <span>fresh items'</span>
-  <h2>farm fresh organic<br>fruits 250g</h2>
-  <h3 class="price">$7.99<span>/kg</span></h3>
-  <i class='bx bx-cart'></i>
-  <i class='bx bx-heart' ></i>
-  <span class="discount">-25%</span>
-</div>
+      </div>
+      <div  class="products-container" id="products-container">
+       
       </div>
     </section>
       <!--about-->

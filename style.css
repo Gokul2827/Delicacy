@@ -453,6 +453,138 @@ header{
     align-items: center;
     padding: 20px;
 }
+
+/* cartpage */
+/* .cart{
+    background-color: #cacbccf2;
+    width: 70%;
+    height: fit-content;
+    padding: 30px;
+    margin: auto;
+    border-radius: 18px;
+    margin-top: 50px;
+}
+.table{
+    width: 100%;
+    font-size: 1.2rem ;
+    row-gap: 30px;    
+} */
+
+.card{
+    position: fixed;
+    top:300px;
+    left:100%;
+    background-color: var(--green-color);
+    height: 60vh;
+    opacity: 100%;
+    width: 500px;
+    transition: 0.5s;
+    z-index: 10000;
+   
+}
+.card h1{
+    color: var(--bg-color);
+    font-weight:100 ;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1);   
+    
+}
+.card .checkout div{
+    background-color: var(--light-orange-color);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkout div:nth-child(2){
+    background-color: #868a92;
+    color: var(--bg-color);
+}
+.active .card{
+    left:calc(100% - 300px)
+}
+.active .container{
+    transform: translateX(-200px);
+}
+
+
+.listcard li{
+    display: flex;
+    column-gap: 40px;
+    
+    grid-template-columns:100px repeat(1,2);
+    color:white;
+    background-color:var(--light-orange-color);
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listcard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.listcard li div span{
+    color: #e9f4e3;
+}
+.listcard button{
+    width: 15px;
+    background-color: grey;
+    border: none;
+}
+.listcard{
+    position: absolute;
+}
+.overflow{
+    height: 250px;
+    background-color:transparent;
+    position: relative;
+    overflow-y: scroll;
+}
+#profscroll{
+    position: absolute;
+    display: none;
+    right: 80px;
+    top: 65px;
+    width: 200px;
+    height: 150px;
+    background-color: var(--green-color);
+    border-radius: 0px 0px 10px 10px;
+}
+#profscroll p{
+    justify-content: center;
+    display: flex;
+    color: white;
+    padding: 7px;
+    margin-top: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#profscroll p:hover{
+    color: var(--light-orange-color);
+}
+
+
+
+
+
+
+
 /*making responsive*/
 @media(max-width:1080px){
     header{
@@ -478,6 +610,20 @@ header{
     }
 }
 @media(max-width:500px){
+    .card{
+        
+        top:230px;
+        height: 60vh;
+        width: 300px;
+    }
+    .overflow{
+        height: 160px;
+    }
+    #profscroll{
+        right: 6px;
+       top:60px;
+       width: 190px;
+    }
     header{
         padding: 12px 4%;
     }
